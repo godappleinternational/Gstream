@@ -10,6 +10,10 @@ const execAsync = util.promisify(exec);
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
+app.get('/', (req, res) => {
+  res.json({ message: '🚀 Gstream Backend LIVE on port 4000!' });
+});
+
 
 // === EDIT THESE TO YOUR ENVIRONMENT ===
 const SRS_CONFIG_FILE = '/path/to/your/srs.conf'; // Full path to your SRS main config file
